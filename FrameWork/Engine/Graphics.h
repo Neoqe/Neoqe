@@ -3,6 +3,7 @@
 #include <wrl.h>
 #include "WeeException.h"
 #include "Colours.h"
+#include "RectF.h"
 
 class Graphics
 {
@@ -36,6 +37,12 @@ public:
 		PutPixel( x,y,{ unsigned char( r ),unsigned char( g ),unsigned char( b ) } );
 	}
 	void PutPixel( int x,int y,Colour c );
+	void DrawRect(int x0, int y0, int x1, int y1, Colour c);
+	void DrawRect(const RectF& rect, Colour c)
+	{
+		DrawRect(int (rect.left), int (rect.top), int(rect.right), int(rect.bottom), c);
+	}
+	void DrawCircle();
 	~Graphics();
 private:
 	Microsoft::WRL::ComPtr<IDXGISwapChain>				pSwapChain;

@@ -136,7 +136,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Ball.h" />
+    <ClInclude Include="Brick.h" />
     <ClInclude Include="FrameTimer.h" />
+    <ClInclude Include="Paddle.h" />
     <ClInclude Include="RectF.h" />
     <ClInclude Include="SpriteCodex.h" />
     <ClInclude Include="Vec2.h" />
@@ -152,6 +155,7 @@
     <ClInclude Include="Resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Brick.cpp" />
     <ClCompile Include="DXErr.cpp" />
     <ClCompile Include="FrameTimer.cpp" />
     <ClCompile Include="Game.cpp" />
