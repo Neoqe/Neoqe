@@ -141,6 +141,7 @@
     <ClInclude Include="FrameTimer.h" />
     <ClInclude Include="Paddle.h" />
     <ClInclude Include="RectF.h" />
+    <ClInclude Include="Sound.h" />
     <ClInclude Include="SpriteCodex.h" />
     <ClInclude Include="Vec2.h" />
     <ClInclude Include="WeeException.h" />
@@ -166,6 +167,7 @@
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="Mouse.cpp" />
     <ClCompile Include="RectF.cpp" />
+    <ClCompile Include="Sound.cpp" />
     <ClCompile Include="SpriteCodex.cpp" />
     <ClCompile Include="Vec2.cpp" />
   </ItemGroup>
