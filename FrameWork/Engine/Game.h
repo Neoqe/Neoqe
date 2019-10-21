@@ -21,4 +21,5 @@ private:
 	Graphics gfx;
 	FrameTimer ft;
 	Ball ball;
+	RectF Walls;
 };
