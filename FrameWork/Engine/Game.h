@@ -6,7 +6,7 @@
 #include "FrameTimer.h"
 #include "Ball.h"
 #include "Sound.h"
-
+#include "Brick.h"
 class Game
 {
 public:
@@ -24,4 +24,6 @@ private:
 	Ball ball;
 	RectF Walls;
 	Sound SoundPad;
+	Brick brick;
+	Sound SoundBrick;
 };

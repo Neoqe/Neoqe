@@ -298,15 +298,40 @@ void Graphics::PutPixel( int x,int y,Colour c )
 
 void Graphics::DrawRect(int x0, int y0, int x1, int y1, Colour c)
 {
-	for (x0 = 0; x0 < x1; ++x0)
+	if (x0 > x1)
 	{
-		for (y0 = 0; y0 < y1; ++y0)
+		std::swap(x0, x1);
+	}
+	if (y0 > y1)
+	{
+		std::swap(y0, y1);
+	}
+
+	for (int y = y0; y < y1; ++y)
+	{
+		for (int x = x0; x < x1; ++x)
 		{
-			PutPixel(x0, y0, c);
+			PutPixel(x, y, c);
 		}
 	}
 }
 
+void Graphics::DrawCircle(int x, int y, int radius, Colour c)
+{
+	const int rad_sq = radius * radius;
+	for (int y_loop = y - radius + 1; y_loop < y + radius; y_loop++)
+	{
+		for (int x_loop = x - radius + 1; x_loop < x + radius; x_loop++)
+		{
+			const int x_diff = x - x_loop;
+			const int y_diff = y - y_loop;
+			if (x_diff * x_diff + y_diff * y_diff <= rad_sq)
+			{
+				PutPixel(x_loop, y_loop, c);
+			}
+		}
+	}
+}
 
 //////////////////////////////////////////////////
 //           Graphics Exception
